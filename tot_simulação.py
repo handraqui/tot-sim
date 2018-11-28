@@ -682,6 +682,11 @@ class DAG():
         F = [[GD[i][j]*int(self.matrix[i][j] == 1) for j in range(self.n_vertices)] for i in range(self.n_vertices)]
         return F
     
+    def ExportMatrix(self):
+        # Depends on numpy
+        aux = numpy.asarray(self.matrix)
+        numpy.savetxt("out",aux,delimiter=",")
+    
     def __str__(self):
         string = ""
         for i in range(self.n_vertices):
