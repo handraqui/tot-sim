@@ -1,13 +1,6 @@
-
-# coding: utf-8
-
-# In[1]:
-
-
 from random import randint
 
 
-# In[2]:
 
 
 def Contains(A,B):
@@ -21,8 +14,6 @@ def Contains(A,B):
     return True
 
 
-# In[3]:
-
 
 def Heirs(vertex,graph):
     
@@ -32,8 +23,6 @@ def Heirs(vertex,graph):
 
     return heirs
 
-
-# In[4]:
 
 
 def Multi_Heirs(vertices, graph):
@@ -45,8 +34,6 @@ def Multi_Heirs(vertices, graph):
     return list(set(multi_heirs))
 
 
-# In[5]:
-
 
 def Parents(vertex, graph):
     
@@ -55,10 +42,7 @@ def Parents(vertex, graph):
     parents = [j for j in range(N) if graph[j][vertex] == 1]
     
     return parents
-    
 
-
-# In[6]:
 
 
 def Multi_Parents(vertices, graph):
@@ -69,8 +53,6 @@ def Multi_Parents(vertices, graph):
 
     return list(set(multi_parents))
 
-
-# In[7]:
 
 
 def Ancestors(vertex, graph):
@@ -90,8 +72,6 @@ def Ancestors(vertex, graph):
     return ancestors
 
 
-# In[181]:
-
 
 def Multi_Ancestors(vertices,graph):
     
@@ -101,8 +81,6 @@ def Multi_Ancestors(vertices,graph):
     
     return list(set(multi_ancestors))
 
-
-# In[8]:
 
 
 def Descendants(vertex, graph):
@@ -123,8 +101,6 @@ def Descendants(vertex, graph):
     return descendants
 
 
-# In[180]:
-
 
 def Multi_Descendants(vertices,graph):
     
@@ -134,8 +110,6 @@ def Multi_Descendants(vertices,graph):
     
     return list(set(multi_descendants))
 
-
-# In[9]:
 
 
 def Has_Cycle(graph):
@@ -151,10 +125,8 @@ def Has_Cycle(graph):
     return False
 
 
-# In[124]:
 
-
-def Which_Cycle(graph):
+def Which_Cycle(graph): 
     
     N = len(graph)
 
@@ -169,23 +141,21 @@ if Has_Cycle(dag):
     Which_Cycle(dag)
 
 
-# In[136]:
-
 
 def PrintAncestors(vertex,graph):
     if len(Parents(vertex,graph)) != 0:
         print (str(vertex),": ", Parents(vertex,graph))
         for i in Parents(vertex,graph):
-            PrintAncestors(i,graph)
+            PrintAncestors(i,graph)            
+
             
-def PrintDescendants(vertex,graph):
+            
+            def PrintDescendants(vertex,graph):
     if len(Heirs(vertex,graph)) != 0:
         print (str(vertex),": ", Heirs(vertex,graph))
         for i in Heirs(vertex,graph):
             PrintDescendants(i,graph)
 
-
-# In[1008]:
 
 
 # Classificação de vértices
