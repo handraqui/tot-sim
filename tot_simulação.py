@@ -111,7 +111,7 @@ def Descendants(vertex, graph):
 
     new_descendants = Heirs(vertex, graph)
 
-    while(not Contains(descendats, new_descendants)):
+    while(not Contains(descendants, new_descendants)):
 
         descendants += new_descendants
         descendants = list(set(descendants))
